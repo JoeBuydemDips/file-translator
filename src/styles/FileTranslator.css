@@ -1,0 +1,78 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 20px;
+  font-family: 'Courier New', monospace;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+}
+
+textarea, .preview {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+/* Dark theme */
+.dark {
+  background-color: #0a0a0a;
+  color: #00ff00;
+}
+
+.dark textarea, .dark .preview {
+  background-color: #1a1a1a;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+}
+
+.dark select, .dark button {
+  background-color: #1a1a1a;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+}
+
+/* Light theme */
+.light {
+  background-color: #f0f0f0;
+  color: #ff00ff;
+}
+
+.light textarea, .light .preview {
+  background-color: #ffffff;
+  color: #ff00ff;
+  border: 1px solid #ff00ff;
+}
+
+.light select, .light button {
+  background-color: #ffffff;
+  color: #ff00ff;
+  border: 1px solid #ff00ff;
+}
+
+/* Cyberpunk accents */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #00ff00, #ff00ff, #00ffff);
+}
+
+select:focus, button:focus, textarea:focus {
+  outline: 2px solid #00ffff;
+  box-shadow: 0 0 10px #00ffff;
+}
